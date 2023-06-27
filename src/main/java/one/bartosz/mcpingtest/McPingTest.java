@@ -1,7 +1,6 @@
 package one.bartosz.mcpingtest;
 
 import one.bartosz.mcpingtest.events.PlayerJoinListener;
-import one.bartosz.mcpingtest.events.PlayerQuitListener;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,10 +19,9 @@ public final class McPingTest extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerQuitListener(this), this);
         getCommand("pingtest").setExecutor(new PingTestCommandHandler(this));
         long pollingFrequency = getConfig().getLong("pingPollingFrequency");
-        new PingPollingTask(this).runTaskTimer(this, 0L, 20L*pollingFrequency);
+        new PingPollingTask(this).runTaskTimer(this, 0L, 20L * pollingFrequency);
     }
 
     @Override

@@ -26,11 +26,11 @@ public class PingTestCommandHandler implements CommandExecutor {
         if (!command.getName().equalsIgnoreCase("pingtest")) return false;
         if (!(sender instanceof Player player)) {
             sender.sendMessage("Only players can use this command!");
-            return false;
+            return true;
         }
         if (!(args.length >= 1)) {
             player.sendMessage(ChatColor.RED + "No arguments! Usage: /pingtest <start/stop>");
-            return false;
+            return true;
         }
         switch (args[0].toLowerCase()) {
             case "start" -> {
@@ -59,6 +59,6 @@ public class PingTestCommandHandler implements CommandExecutor {
             }
             default -> player.sendMessage(ChatColor.RED + "Invalid value for argument no.1! Valid values: start, stop");
         }
-        return false;
+        return true;
     }
 }
