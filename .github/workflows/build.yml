@@ -36,3 +36,4 @@ jobs:
           name: Release commit ${{ steps.short_commit_hash.outputs.sha_short }}
           tag: ${{ steps.short_commit_hash.outputs.sha_short }}
           commit: ${{ github.sha }}
+          token: ${{ GITHUB_TOKEN }}
