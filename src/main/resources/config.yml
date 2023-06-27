@@ -1,8 +1,8 @@
 #Should we start a test for player automatically after they join? They can start it manually with "/pingtest start" too
 startTestOnJoin: true
-#in seconds
+#in seconds, approx
 testDuration: 30
-#How often should the player's ping be checked? this divided by test duration above will give you how many times player ping will be checked
+#How often should the player's ping be checked? this divided by test duration above will give you approx. how many times player ping will be checked
 #in seconds
 pingPollingFrequency: 2
 #Send the latest ping info to player's actionbar (the thing above hotbar)
