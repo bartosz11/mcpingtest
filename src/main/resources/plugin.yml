@@ -1,0 +1,22 @@
+name: mcpingtest
+version: '${version}'
+main: one.bartosz.mcpingtest.McPingTest
+api-version: '1.20'
+authors: [bartosz11]
+description: A simple plugin for setting up a ping test server.
+website: https://github.com/bartosz11/mcpingtest
+
+commands:
+  pingtest:
+    description: Start/stop a latency test.
+    usage: /pingtest <start/stop>
+    permission: mcpingtest.pingtest
+    permission-message: You don't have access to this command.
+
+permissions:
+  mcpingtest.pingtest:
+    description: Allows to start and stop a latency test manually.
+    default: true
+  mcpingtest.onjoin:
+    description: Latency test will be started for players when they join if they have this permission and the feature is enabled in the plugin config.
+    default: true
