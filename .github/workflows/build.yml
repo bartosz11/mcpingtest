@@ -33,6 +33,6 @@ jobs:
         with:
           artifacts: "build/libs/mcpingtest.jar"
           artifactContentType: "application/java-archive"
-          name: Release commit ${{ steps.short_commit_hash.outputs }}
-          tag: ${{ github.sha }}
+          name: Release commit ${{ steps.short_commit_hash.outputs.sha_short }}
+          tag: ${{ steps.short_commit_hash.outputs.sha_short }}
           commit: ${{ github.sha }}
