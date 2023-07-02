@@ -1,7 +1,7 @@
 # mcpingtest
 
 A Minecraft plugin allowing you to set up a server for testing in-game latency.  
-Note: there's also a standalone server that does the same thing built on top of Minestom, currently supports 1.19.3.
+Note: there's also a standalone server that does the same thing built on top of Minestom, currently supports 1.19.3. You can check it out [here](https://github.com/bartosz11/mcpingtest-standalone).
 
 ## Why?
 
